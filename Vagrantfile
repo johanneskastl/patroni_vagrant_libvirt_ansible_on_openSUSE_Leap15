@@ -81,7 +81,9 @@ Vagrant.configure("2") do |config|
           ansible.compatibility_mode = "2.0"
           ansible.limit = "all"
           ansible.groups = {
-            "patroni_nodes"  => [ "patroni1", "patroni2", "patroni3" ],
+            "patroni_nodes"  => [ "patroni1", "patroni2" ],
+            "etcd_nodes"  => [ "etcd1" ],
+            "haproxy_server"  => [ "haproxy" ],
           }
           ansible.playbook = "ansible/playbook-vagrant.yml"
 
