@@ -3,7 +3,7 @@
 #
 scope: postgres
 namespace: /db/
-name: postgresql0
+name: {{ hostvars[inventory_hostname] }}
 
 restapi:
     listen: {{ hostvars['haproxy']['ansible_default_ipv4']['address'] }}:8008
