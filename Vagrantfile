@@ -49,8 +49,8 @@ Vagrant.configure("2") do |config|
   end # each-loop over all VMs
 
   ###################################################################################
-  # define number of nodes
-  P = 3
+  # define number of patroni/postgres nodes
+  P = 2
 
   # provision W VMs as nodes
   (1..P).each do |i|
