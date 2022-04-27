@@ -1,11 +1,15 @@
 ---
 
 - name: 'restart etcd'
-  service:
+  ansible.builtin.service:
     name: 'etcd.service'
     state: 'restarted'
 
 - name: 'restart haproxy'
-  service:
+  ansible.builtin.service:
     name: 'haproxy.service'
     state: 'restarted'
+
+- name: 'Trigger systemctl daemon-reload'
+  ansible.builtin.systemd:
+    daemon_reload: 'yes'
