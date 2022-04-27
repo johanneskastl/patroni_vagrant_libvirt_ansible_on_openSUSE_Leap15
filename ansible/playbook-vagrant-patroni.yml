@@ -47,3 +47,8 @@
         owner: 'root'
         group: 'root'
         mode: '0644'
+      notify:
+        - 'Trigger systemctl daemon-reload'
+
+    - name: 'Flush handlers to trigger the systemctl daemon-reload, if needed'
+      meta: flush_handlers
