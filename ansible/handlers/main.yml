@@ -1,0 +1,11 @@
+---
+
+- name: 'restart etcd'
+  service:
+    name: 'etcd.service'
+    state: 'restarted'
+
+- name: 'restart haproxy'
+  service:
+    name: 'haproxy.service'
+    state: 'restarted'
