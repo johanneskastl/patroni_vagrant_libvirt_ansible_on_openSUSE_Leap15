@@ -37,6 +37,8 @@
         owner: 'postgres'
         group: 'postgres'
         mode: '0600'
+      notify:
+        - 'restart patroni'
 
     - name: 'Create /etc/systemd/system/patroni.service'
       template:
