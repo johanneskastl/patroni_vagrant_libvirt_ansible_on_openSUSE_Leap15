@@ -5,24 +5,4 @@
   become: 'true'
 
   roles:
-    - role: 'install_one_or_more_packages'
-      vars:
-        packages_to_be_installed:
-          - 'etcd'
-  tasks:
-
-    - name: 'Create /etc/sysconfig/etcd'
-      template:
-        src: 'etc_sysconfig_etcd.j2'
-        dest: '/etc/sysconfig/etcd'
-        owner: 'root'
-        group: 'root'
-        mode: '0600'
-      notify:
-        - 'restart etcd'
-
-    - name: 'Start and enable etcd'
-      service:
-        name: 'etcd.service'
-        state: 'started'
-        enabled: 'true'
+    - role: 'install_and_configure_etcd'
