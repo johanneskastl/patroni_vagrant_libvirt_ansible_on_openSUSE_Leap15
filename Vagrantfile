@@ -4,6 +4,25 @@
 Vagrant.configure("2") do |config|
 
   ###################################################################################
+  # haproxy node
+  config.vm.define "haproxy" do |node|
+
+    # which image to use
+    node.vm.box = "opensuse/Leap-15.3.x86_64"
+
+    # sizing of the VMs
+    node.vm.provider "libvirt" do |lv|
+      lv.random_hostname = false
+      lv.memory = 1024
+      lv.cpus = 1
+    end
+
+    # set the hostname
+    node.vm.hostname = "haproxy"
+
+  end # config.vm.define
+
+  ###################################################################################
   # define number of nodes
   P = 3
 
