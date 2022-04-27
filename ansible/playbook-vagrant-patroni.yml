@@ -52,3 +52,9 @@
 
     - name: 'Flush handlers to trigger the systemctl daemon-reload, if needed'
       meta: flush_handlers
+
+    - name: 'Start and enable patroni'
+      service:
+        name: 'patroni.service'
+        state: 'started'
+        enabled: 'true'
