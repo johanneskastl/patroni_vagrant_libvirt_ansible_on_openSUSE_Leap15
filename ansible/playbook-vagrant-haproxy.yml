@@ -3,7 +3,7 @@
   hosts: 'all'
   gather_facts: 'yes'
 
-- name: 'Install haproxy on etcd nodes'
+- name: 'Install haproxy'
   hosts: 'haproxy_server'
   gather_facts: 'yes'
   become: 'true'
