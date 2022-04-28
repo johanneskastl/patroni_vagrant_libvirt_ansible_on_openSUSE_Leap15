@@ -5,11 +5,6 @@
     name: 'etcd.service'
     state: 'restarted'
 
-- name: 'restart haproxy'
-  ansible.builtin.service:
-    name: 'haproxy.service'
-    state: 'restarted'
-
 - name: 'restart patroni'
   ansible.builtin.service:
     name: 'patroni.service'

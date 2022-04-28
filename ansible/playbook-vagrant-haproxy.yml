@@ -31,3 +31,10 @@
         name: 'haproxy.service'
         state: 'started'
         enabled: 'true'
+
+  handlers:
+
+    - name: 'restart haproxy'
+      ansible.builtin.service:
+        name: 'haproxy.service'
+        state: 'restarted'
