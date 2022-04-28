@@ -1,7 +1,0 @@
----
-
-- name: 'restart etcd'
-  ansible.builtin.service:
-    name: 'etcd.service'
-    state: 'restarted'
-
