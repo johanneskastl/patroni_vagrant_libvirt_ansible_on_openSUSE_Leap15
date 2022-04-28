@@ -42,7 +42,7 @@ bootstrap:
 postgresql:
     listen: {{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}:5432
     connect_address: {{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}:5432
-    data_dir: /mnt/patroni
+    data_dir: /opt/patroni/patroni
     pgpass: /tmp/pgpass
     authentication:
         replication:
