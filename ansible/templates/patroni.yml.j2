@@ -6,8 +6,8 @@ namespace: /db/
 name: {{ hostvars[inventory_hostname]['ansible_hostname'] }}
 
 restapi:
-    listen: {{ hostvars['haproxy']['ansible_default_ipv4']['address'] }}:8008
-    connect_address: {{ hostvars['haproxy']['ansible_default_ipv4']['address'] }}:8008
+    listen: {{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}:8008
+    connect_address: {{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}:8008
 
 etcd:
     host: {{ hostvars[groups['etcd_nodes'][0]]['ansible_default_ipv4']['address'] }}:2379
