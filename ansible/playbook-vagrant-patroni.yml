@@ -22,9 +22,17 @@
 
   tasks:
 
-    - name: 'Create directory /mnt/patroni/'
+    - name: 'Create directory /opt/patroni/'
       file:
-        path: '/mnt/patroni/'
+        path: '/opt/patroni/'
+        state: 'directory'
+        owner: 'postgres'
+        group: 'postgres'
+        mode: '0700'
+
+    - name: 'Create directory /opt/patroni/patroni'
+      file:
+        path: '/opt/patroni/patroni'
         state: 'directory'
         owner: 'postgres'
         group: 'postgres'
