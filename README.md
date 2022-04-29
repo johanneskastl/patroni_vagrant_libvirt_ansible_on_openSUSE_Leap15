@@ -12,7 +12,7 @@ Default OS is openSUSE Leap 15.3, but that can be changed in the Vagrantfile. Pl
 2. Fetch the box, per default this is `opensuse/Leap-15.3.x86_64`, using `vagrant box add opensuse/Leap-15.3.x86_64`.
 3. Make sure the git submodules are fully working by issuing `git submodule init && git submodule update`
 4. Run `vagrant up`
-5. Open the haproxy node's IP address on port 7000 to visit the haproxy statistics, including your postgresql backend.
+5. Open the haproxy node's IP address on port 80 to visit the haproxy statistics, including your postgresql backend.
 6. Party!
 
 ## Disabling the Ansible provisioning
