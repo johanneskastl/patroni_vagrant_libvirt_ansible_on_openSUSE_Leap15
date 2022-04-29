@@ -1,4 +1,10 @@
 ---
+- name: "Run 10_SLES_register.yml"
+  import_playbook: 10_SLES_register.yml
+
+- name: "Run 20_SLES_register_SUSE_HA.yml"
+  import_playbook: 20_SLES_register_SUSE_HA.yml
+
 - name: 'Basic configuration on all nodes'
   hosts: 'all'
   gather_facts: 'yes'
