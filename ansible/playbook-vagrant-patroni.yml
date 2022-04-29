@@ -13,6 +13,7 @@
       vars:
         repository_name: 'home_ojkastl_buildservice_patroni'
         repository_baseurl: 'https://download.opensuse.org/repositories/home:/ojkastl_buildservice:/Patroni/15.3'
+        auto_import_keys: 'true'
     - role: 'install_one_or_more_packages'
       vars:
         packages_to_be_installed:
