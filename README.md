@@ -4,6 +4,8 @@ This Vagrant setup creates all that you need to start playing with [Patroni](htt
 
 Default OS is openSUSE Leap 15.3, but that can be changed in the Vagrantfile. Please beware, this might break the ansible provisioning which was only tested with openSUSE Leap 15.3.
 
+(There is [another setup using SLES15 SP3](https://github.com/johanneskastl/patroni_vagrant_libvirt_ansible_on_SLES15) which is ~~very similar~~ almost identical to this one)
+
 ## Vagrant
 
 1. You need vagrant obviously. And ansible. And git...
